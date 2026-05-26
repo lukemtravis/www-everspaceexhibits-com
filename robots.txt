@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.everspaceexhibits.com/sitemap.xml
