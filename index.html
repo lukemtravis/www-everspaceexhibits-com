@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tells mobile browsers NOT to auto-invert our custom CSS -->
+    <meta name="color-scheme" content="light dark">
+    
     <title>Everspace Exhibits | Florida Trade Show Booths</title>
     
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
@@ -24,15 +29,18 @@
                 --bg-color: #121212;
                 --text-color: #f1f1f1;
                 --brand-dark: #262626;
-                --brand-highlight: #52b8b6; /* Lightened teal for dark mode contrast */
+                --brand-highlight: #52b8b6;
                 --card-bg: #1e1e1e;
                 --card-border: #333;
                 --shadow: rgba(0, 0, 0, 0.3);
             }
 
-            /* Protect the dark logo on dark backgrounds by targeting the WRAPPER, not the img */
             .logo-wrapper {
+                /* The Gradient Hack: 
+                   Mobile algorithms invert background-colors, but skip background-images. 
+                   Using a gradient forces the white box to stay white everywhere. */
                 background-color: rgba(255, 255, 255, 0.95);
+                background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
                 padding: 15px 25px;
                 border-radius: 8px;
             }
@@ -65,7 +73,7 @@
         }
 
         .logo-wrapper {
-            display: inline-block; /* Ensures the background tightly hugs the logo */
+            display: inline-block;
             max-width: 100%;
         }
 
@@ -73,7 +81,7 @@
             max-width: 100%;
             width: 350px;
             height: auto;
-            display: block; /* Removes bottom spacing below the image */
+            display: block;
         }
 
         h1, h2, h3 {
@@ -172,7 +180,7 @@
             opacity: 0.7;
         }
 
-        /* Mobile & Tablet Responsiveness for the 4-column grid */
+        /* Mobile & Tablet Responsiveness */
         @media (max-width: 900px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
