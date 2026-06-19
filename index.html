@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everspace Exhibits | Orlando Trade Show Booths</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        /* Light/Dark Mode Variables */
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #262626;
+            --brand-dark: #0d3b3a;
+            --brand-highlight: #0d3b3a;
+            --card-bg: #ffffff;
+            --card-border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #f1f1f1;
+                --brand-dark: #262626;
+                --brand-highlight: #52b8b6; /* Lightened teal for dark mode contrast */
+                --card-bg: #1e1e1e;
+                --card-border: #333;
+                --shadow: rgba(0, 0, 0, 0.3);
+            }
+
+            /* Protect the dark logo on dark backgrounds */
+            .logo-img {
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 15px 25px;
+                border-radius: 8px;
+            }
+        }
+
+        /* Global Reset & Typography */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Center-Justified Content Layout */
+        .container {
+            max-width: 1100px; /* Widened slightly to comfortably fit 4 boxes per row */
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            width: 350px;
+            height: auto;
+            display: inline-block;
+        }
+
+        h1, h2, h3 {
+            color: var(--brand-highlight);
+            margin-bottom: 15px;
+        }
+
+        .lead-blurb {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            color: var(--text-color);
+        }
+
+        /* Services Grid - Fixed to 4 columns */
+        .services-section {
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Forces 4 columns */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 25px 15px;
+            box-shadow: 0 4px 10px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.05rem;
+            margin-top: 0;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: inherit;
+        }
+
+        /* Portfolio Gallery */
+        .gallery-section {
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 10px var(--shadow);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 40px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .contact-section a {
+            color: var(--brand-highlight);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile & Tablet Responsiveness for the 4-column grid */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr); /* Drops to 2x4 on tablets */
+            }
+        }
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr; /* Drops to a single column on phones */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- Header & Logo -->
+        <header>
+            <img src="images/everspace_exhibits_logo_with_text.png" alt="Everspace Exhibits Logo" class="logo-img">
+        </header>
+
+        <!-- Company Blurb -->
+        <section class="about-section">
+            <p class="lead-blurb">
+                Welcome to <strong>Everspace Exhibits</strong>. Based in Orlando, Florida, we're a premier tradeshow booth partner servicing clients across the entire Sunshine State. We specialize in creating immersive, high-impact exhibit spaces that captivate your audience and elevate your brand presence. From initial concept to final teardown, our team is dedicated to delivering seamless and unforgettable event experiences.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Booth Design</h3>
+                    <p>Tailored, high-fidelity 3D designs that bring your brand's unique vision and storytelling to life on the show floor.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Booth Fabrication & Manufacturing</h3>
+                    <p>Premium quality builds utilizing durable, modern materials to ensure your exhibit stands out from the competition.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Exhibit Rentals</h3>
+                    <p>Flexible, cost-effective rental solutions that deliver massive visual impact without compromising on functionality.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Graphic Printing & Signage</h3>
+                    <p>High-resolution, vibrant fabric and rigid graphic prints designed to capture attention and communicate your message clearly.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Installation & Dismantling (I&D)</h3>
+                    <p>Professional, fully-insured on-site labor to safely and efficiently build and break down your exhibit space.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Logistics & Shipping</h3>
+                    <p>Reliable transportation, freight management, and secure warehousing of your booth assets to and from the venue.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Audio-Visual (AV) Integration</h3>
+                    <p>Cutting-edge display technology, lighting, and sound integration to create interactive, engaging attendee experiences.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Project Management & Compliance</h3>
+                    <p>Dedicated support handling show regulations, union paperwork, and strict timelines so you can focus entirely on your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Gallery Section -->
+        <section class="gallery-section">
+            <h2>Recent Exhibits</h2>
+            <div class="gallery-grid">
+                <img src="images/booth_10x10.jpg" alt="10x10 Booth Example">
+                <img src="images/booth_10x20.jpg" alt="10x20 Booth Example">
+                <img src="images/booth_20x20.jpg" alt="20x20 Booth Example">
+            </div>
+        </section>
+
+        <!-- Contact Section with Obfuscated Email -->
+        <section class="contact-section">
+            <h2>Ready to Elevate Your Next Event?</h2>
+            <p>Get in touch with our team today to start planning your exhibit.</p>
+            
+            <!-- Email is obfuscated using JavaScript array joining to trick basic scraping bots -->
+            <script>
+                const user = "hello";
+                const domain = "everspaceexhibits.com";
+                document.write('<a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>');
+            </script>
+            <noscript>
+                <!-- Fallback for users with JavaScript disabled -->
+                hello [at] everspaceexhibits [dot] com
+            </noscript>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            &copy; <script>document.write(new Date().getFullYear())</script> Everspace Exhibits LLC. All rights reserved.
+        </footer>
+
+    </main>
+
+</body>
+</html>
