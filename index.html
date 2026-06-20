@@ -15,13 +15,15 @@
     <style>
         /* Light/Dark Mode Variables */
         :root {
-            --bg-color: #fdfdfd;
+            /* Changed from pure white to a very subtle, soft brand-tinted gray to make the white cards pop */
+            --bg-color: #f0f4f4; 
             --text-color: #262626;
             --brand-dark: #0d3b3a;
             --brand-highlight: #0d3b3a;
+            /* Cards stay pure white to create depth against the new background */
             --card-bg: #ffffff;
             --card-border: #e0e0e0;
-            --shadow: rgba(0, 0, 0, 0.05);
+            --shadow: rgba(0, 0, 0, 0.08);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -32,7 +34,7 @@
                 --brand-highlight: #52b8b6;
                 --card-bg: #1e1e1e;
                 --card-border: #333;
-                --shadow: rgba(0, 0, 0, 0.3);
+                --shadow: rgba(0, 0, 0, 0.4);
             }
 
             .logo-wrapper {
@@ -140,11 +142,22 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            gap: 30px; /* Increased gap slightly to accommodate headers */
         }
 
-        .gallery-grid img {
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            color: var(--brand-highlight);
+        }
+
+        .gallery-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
@@ -160,6 +173,7 @@
             border: 1px solid var(--card-border);
             border-radius: 10px;
             margin-bottom: 40px;
+            box-shadow: 0 4px 10px var(--shadow);
         }
 
         .contact-section a {
@@ -205,7 +219,7 @@
 
         <section class="about-section">
             <p class="lead-blurb">
-                Welcome to <strong>Everspace Exhibits</strong>. Based in Orlando, Florida, we're a premier tradeshow booth partner servicing clients across the Sunshine State. We specialize in creating immersive, high-impact exhibit spaces that captivate your audience and elevate your brand presence. From initial concept to final teardown, our team is dedicated to delivering seamless and unforgettable event experiences.
+                Welcome to <strong>Everspace Exhibits</strong>. Based in Orlando, Florida, we're a premier tradeshow booth partner servicing clients across the entire Sunshine State. We specialize in creating immersive, high-impact exhibit spaces that captivate your audience and elevate your brand presence. From initial concept to final teardown, our team is dedicated to delivering seamless and unforgettable event experiences.
             </p>
         </section>
 
@@ -248,11 +262,19 @@
         </section>
 
         <section class="gallery-section">
-            <h2>Recent Exhibits</h2>
             <div class="gallery-grid">
-                <img src="images/booth_10x10.jpg" alt="10x10 Booth Example">
-                <img src="images/booth_10x20.jpg" alt="10x20 Booth Example">
-                <img src="images/booth_20x20.jpg" alt="20x20 Booth Example">
+                <div class="gallery-item">
+                    <h3>10' &times; 10'</h3>
+                    <img src="images/booth_10x10.jpg" alt="10x10 Booth Example">
+                </div>
+                <div class="gallery-item">
+                    <h3>10' &times; 20'</h3>
+                    <img src="images/booth_10x20.jpg" alt="10x20 Booth Example">
+                </div>
+                <div class="gallery-item">
+                    <h3>20' &times; 20'</h3>
+                    <img src="images/booth_20x20.jpg" alt="20x20 Booth Example">
+                </div>
             </div>
         </section>
 
